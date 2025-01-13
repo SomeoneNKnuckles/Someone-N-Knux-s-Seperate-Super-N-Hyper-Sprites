@@ -1,0 +1,202 @@
+function u64 getCharacterSpriteKey(u8 character, u8 format)
+{
+    if (character == CHARACTER_SONIC)
+    {
+	if (super.active)
+	{
+        	if (SuperSonicChar == 00)
+        	{
+        	return "character_supersonic"
+        	}
+		if (SuperSonicChar == 01)
+        	{
+        	return "character_supersonic"
+        	}
+	}
+	if (super.active == 0xff)
+	{
+        	if (SuperSonicChar == 00)
+        	{
+        	return "character_hypersonic"
+        	}
+		if (SuperSonicChar == 01)
+        	{
+        	return "character_supersonic"
+        	}
+	}
+    }
+    if (character == CHARACTER_KNUCKLES)
+    {
+	if (super.active)
+	{
+        	if (SuperKnuxChar == 00)
+        	{
+        	return "character_superknuckles"
+        	}
+		if (SuperKnuxChar == 01)
+        	{
+        	return "character_knuckles"
+        	}
+	}
+	if (super.active == 0xff)
+	{
+        	if (SuperKnuxChar == 00)
+        	{
+        	return "character_hyperknuckles"
+        	}
+		if (SuperKnuxChar == 01)
+        	{
+        	return "character_knuckles"
+        	}
+	}
+    }
+    if (character == CHARACTER_TAILS)
+    {
+	if (super.active.tails)
+	{
+        	if (SuperTailsChar == 00)
+        	{
+        	return "character_supertails"
+        	}
+		if (SuperTailsChar == 01)
+        	{
+        	return "character_tails"
+        	}
+	}
+	if (super.active.tails == 0xff)
+	{
+        	if (SuperTailsChar == 00)
+        	{
+        	return "character_hypertails"
+        	}
+		if (SuperTailsChar == 01)
+        	{
+        	return "character_tails"
+        	}
+	}
+	if (super.active)
+	{
+        	if (isMainCharacter(CHARACTER_SONIC))
+        	{
+        	    	if (SuperPartnerChar == 00)
+        		{
+        	    	return "character_supertails"
+        		}
+			if (SuperPartnerChar == 01)
+        		{
+        	    	return "character_tails"
+        		}
+        	}
+		if (isMainCharacter(CHARACTER_KNUCKLES))
+        	{
+        	    	if (SuperPartnerChar == 00)
+        		{
+        	    	return "character_supertails"
+        		}
+			if (SuperPartnerChar == 01)
+        		{
+        	    	return "character_tails"
+        		}
+        	}
+	}
+	if (super.active == 0xff)
+	{
+        	if (isMainCharacter(CHARACTER_SONIC))
+        	{
+        	    	if (SuperPartnerChar == 00)
+        		{
+        	    	return "character_hypertails"
+        		}
+			if (SuperPartnerChar == 01)
+        		{
+        	    	return "character_tails"
+        		}
+        	}
+		if (isMainCharacter(CHARACTER_KNUCKLES))
+        	{
+        	    	if (SuperPartnerChar == 00)
+        		{
+        	    	return "character_hypertails"
+        		}
+			if (SuperPartnerChar == 01)
+        		{
+        	    	return "character_tails"
+        		}
+        	}
+	}
+    }
+return base.getCharacterSpriteKey(character, format)
+}
+
+function string Standalone.getModdedAnimationSpriteKey (u8 character, u16 animationSpriteEx)
+{
+    if (character == CHARACTER_SONIC && u8[0xffffe654] == 0 && animationSpriteEx >= 0x21 && animationSpriteEx <= 0x30)
+    {
+    	if (abs(char.groundspeed) >= 0xccc)
+    	{
+		if (global.zone == 0x0c)
+        	{
+            		if (super.active == 0xff)
+            		{
+                		return stringformat("hypersonic_DDZ_%d", char.animation.frame)
+            		}
+			else if (super.active)
+            		{
+                		return stringformat("supersonic_DDZ_%d", char.animation.frame)
+            		}
+        	}
+    	}
+    }
+    return base.Standalone.getModdedAnimationSpriteKey(character, animationSpriteEx)
+}
+
+function string getCharacterTornadoSpriteKey(u8 character)
+{
+	if (char.character == CHARACTER_SONIC)
+	{
+		if (super.active == 0xff)
+		{
+			return "tornado_supersonic"
+		}
+		if (super.active == 0x01)
+		{
+			return "tornado_supersonic"
+		}
+		else if (super.active == 0x00)
+		{
+			return "tornado_sonic"
+		}
+	}
+	if (char.character == CHARACTER_TAILS)
+	{
+		if (super.active == 0xff)
+		{
+			return "tornado_supertails"
+		}
+		if (super.active == 0x01)
+		{
+			return "tornado_supertails"
+		}
+		else if (super.active == 0x00)
+		{
+			return "tornado_tails"
+		}
+	}
+	if (char.character == CHARACTER_KNUCKLES)
+	{
+		if (super.active == 0xff)
+		{
+			return "tornado_superknuckles"
+		}
+		if (super.active == 0x01)
+		{
+			return "tornado_superknuckles"
+		}
+		else if (super.active == 0x00)
+		{
+			return "tornado_knuckles"
+		}
+	}
+
+    return base.getCharacterTornadoSpriteKey(character)
+}

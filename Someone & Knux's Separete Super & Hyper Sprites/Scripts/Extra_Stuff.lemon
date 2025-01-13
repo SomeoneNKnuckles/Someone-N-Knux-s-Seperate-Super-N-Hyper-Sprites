@@ -1,0 +1,130 @@
+function u64 Monitor.getIconSpriteKey(u8 type)
+{
+	if (type == 0x09)
+	{
+		if (super.active == 0xff || super.active.tails == 0xff)
+		{
+			return "monitor_icon_hyper"
+		}
+		else if (super.active || super.active.tails)
+		{
+			return "monitor_icon_hyper"
+		}
+		else
+		{
+			return "monitor_icon_super"
+		}
+	}
+	if (type == 0x01 && isMainCharacter(CHARACTER_SONIC))
+	{
+	   if (SuperSonicMon == 00)
+	   {
+		if (super.active == 0xff)
+		{
+			return "monitor_icon_hypersonic"
+		}
+		else if (super.active)
+		{
+			return "monitor_icon_supersonic"
+		}
+		else
+		{
+			return "monitor_icon_sonic"
+		}
+	   }
+	   if (SuperSonicMon == 01)
+	   {
+		return "monitor_icon_sonic"
+	   }
+	}
+	if (type == 0x01 && isMainCharacter(CHARACTER_TAILS))
+	{
+	   if (SuperTailsMon == 00)
+	   {
+		if (super.active.tails == 0xff)
+		{
+			return "monitor_icon_hypertails"
+		}
+		else if (super.active.tails)
+		{
+			return "monitor_icon_supertails"
+		}
+		else
+		{
+			return "monitor_icon_tails"
+		}
+	   }
+	   if (SuperTailsMon == 01)
+	   {
+		return "monitor_icon_tails"
+	   }
+	}
+	if (type == 0x01 && isMainCharacter(CHARACTER_KNUCKLES))
+	{
+	   if (SuperKnuxMon == 00)
+	   {
+		if (super.active == 0xff)
+		{
+			return "monitor_icon_hyperknuckles"
+		}
+		else if (super.active)
+		{
+			return "monitor_icon_superknuckles"
+		}
+		else
+		{
+			return "monitor_icon_knuckles"
+		}
+	   }
+	   if (SuperKnuxMon == 01)
+	   {
+		return "monitor_icon_knuckles"
+	   }
+	}
+	if (type == 0x04 && isMainCharacter(CHARACTER_SONIC))
+	{
+		return "monitor_sonic_shoe"
+	}
+	if (type == 0x04 && isMainCharacter(CHARACTER_TAILS))
+	{
+		return "monitor_tails_shoe"
+	}
+	if (type == 0x04 && isMainCharacter(CHARACTER_KNUCKLES))
+	{
+		return "monitor_knuckles_shoe"
+	}
+	if (type == 0x02 && isMainCharacter(CHARACTER_KNUCKLES))
+	{
+		if (Mods.isModActive("Stone 3 A.I.R."))
+		{
+			return "monitor_icon_stone"
+		}
+		else
+		{
+			return "monitor_icon_eggrobo"
+		}
+	}
+	else return base.Monitor.getIconSpriteKey(type)
+}
+
+function string Standalone.getModdedAnimationSpriteKey (u8 character, u16 animationSpriteEx)
+{
+    if (character == CHARACTER_SONIC && u8[0xffffe654] == 0 && animationSpriteEx >= 0x21 && animationSpriteEx <= 0x30)
+    {
+    	if (abs(char.groundspeed) >= 0xccc)
+    	{
+		if (SuperSonicPeel == 00)
+        	{
+            		if (super.active == 0xff)
+            		{
+                		return stringformat("hypersonic_peelout_%d", char.animation.frame)
+            		}
+			else if (super.active)
+            		{
+                		return stringformat("supersonic_peelout_%d", char.animation.frame)
+            		}
+        	}
+    	}
+    }
+    return base.Standalone.getModdedAnimationSpriteKey(character, animationSpriteEx)
+}

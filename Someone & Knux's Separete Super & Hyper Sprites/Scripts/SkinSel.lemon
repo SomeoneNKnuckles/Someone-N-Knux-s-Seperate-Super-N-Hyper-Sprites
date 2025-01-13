@@ -1,0 +1,551 @@
+global u8 SonicSkin
+global u8 TailsSkin
+global u8 KnuxSkin
+
+function u64 getCharacterSpriteKey(u8 character)
+{
+    if (character == CHARACTER_SONIC)
+    {
+	if (super.active == 0xff)
+	{
+		if (SonicSkin == 0x01)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin1"
+        		}
+		}
+		if (SonicSkin == 0x02)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin2"
+        		}
+		}
+		if (SonicSkin == 0x03)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin3"
+        		}
+		}
+		if (SonicSkin == 0x04)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin4"
+        		}
+		}
+		if (SonicSkin == 0x05)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin5"
+        		}
+		}
+		if (SonicSkin == 0x06)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin6"
+        		}
+		}
+		if (SonicSkin == 0x07)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin7"
+        		}
+		}
+		if (SonicSkin == 0x08)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin8"
+        		}
+		}
+		if (SonicSkin == 0x09)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin9"
+        		}
+		}
+		if (SonicSkin == 0x10)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin10"
+        		}
+		}
+		if (SonicSkin == 0x11)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin11"
+        		}
+		}
+		if (SonicSkin == 0x12)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin12"
+        		}
+		}
+		if (SonicSkin == 0x13)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin13"
+        		}
+		}
+		if (SonicSkin == 0x14)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin14"
+        		}
+		}
+		if (SonicSkin == 0x15)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin15"
+        		}
+		}
+		if (SonicSkin == 0x16)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin16"
+        		}
+		}
+		if (SonicSkin == 0x17)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin17"
+        		}
+		}
+		if (SonicSkin == 0x18)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin18"
+        		}
+		}
+		if (SonicSkin == 0x19)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin19"
+        		}
+		}
+		if (SonicSkin == 0x20)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin20"
+        		}
+		}
+		if (SonicSkin == 0x21)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin21"
+        		}
+		}
+		if (SonicSkin == 0x22)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin22"
+        		}
+		}
+		if (SonicSkin == 0x23)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin23"
+        		}
+		}
+		if (SonicSkin == 0x24)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin24"
+        		}
+		}
+		if (SonicSkin == 0x25)
+		{
+			if (SuperSonicChar == 01)
+        		{
+        		return "character_hypersonic_skin25"
+        		}
+		}
+	}
+    }
+    if (character == CHARACTER_TAILS)
+    {
+	if (super.active.tails == 0xff)
+	{
+		if (TailsSkin == 0x01)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin1"
+        		}
+		}
+		if (TailsSkin == 0x02)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin2"
+        		}
+		}
+		if (TailsSkin == 0x03)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin3"
+        		}
+		}
+		if (TailsSkin == 0x04)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin4"
+        		}
+		}
+		if (TailsSkin == 0x05)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin5"
+        		}
+		}
+		if (TailsSkin == 0x06)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin6"
+        		}
+		}
+		if (TailsSkin == 0x07)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin7"
+        		}
+		}
+		if (TailsSkin == 0x08)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin8"
+        		}
+		}
+		if (TailsSkin == 0x09)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin9"
+        		}
+		}
+		if (TailsSkin == 0x10)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin10"
+        		}
+		}
+		if (TailsSkin == 0x11)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin11"
+        		}
+		}
+		if (TailsSkin == 0x12)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin12"
+        		}
+		}
+		if (TailsSkin == 0x13)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin13"
+        		}
+		}
+		if (TailsSkin == 0x14)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin14"
+        		}
+		}
+		if (TailsSkin == 0x15)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin15"
+        		}
+		}
+		if (TailsSkin == 0x16)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin16"
+        		}
+		}
+		if (TailsSkin == 0x17)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin17"
+        		}
+		}
+		if (TailsSkin == 0x18)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin18"
+        		}
+		}
+		if (TailsSkin == 0x19)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin19"
+        		}
+		}
+		if (TailsSkin == 0x20)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin20"
+        		}
+		}
+		if (TailsSkin == 0x21)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin21"
+        		}
+		}
+		if (TailsSkin == 0x22)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin22"
+        		}
+		}
+		if (TailsSkin == 0x23)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin23"
+        		}
+		}
+		if (TailsSkin == 0x24)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin24"
+        		}
+		}
+		if (TailsSkin == 0x25)
+		{
+			if (SuperTailsChar == 01)
+        		{
+        		return "character_hypertails_skin25"
+        		}
+		}
+	}
+    }
+    if (character == CHARACTER_KNUCKLES)
+    {
+	if (super.active == 0xff)
+	{
+		if (KnuxSkin == 0x01)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin1"
+        		}
+		}
+		if (KnuxSkin == 0x02)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin2"
+        		}
+		}
+		if (KnuxSkin == 0x03)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin3"
+        		}
+		}
+		if (KnuxSkin == 0x04)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin4"
+        		}
+		}
+		if (KnuxSkin == 0x05)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin5"
+        		}
+		}
+		if (KnuxSkin == 0x06)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin6"
+        		}
+		}
+		if (KnuxSkin == 0x07)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin7"
+        		}
+		}
+		if (KnuxSkin == 0x08)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin8"
+        		}
+		}
+		if (KnuxSkin == 0x09)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin9"
+        		}
+		}
+		if (KnuxSkin == 0x10)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin10"
+        		}
+		}
+		if (KnuxSkin == 0x11)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin11"
+        		}
+		}
+		if (KnuxSkin == 0x12)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin12"
+        		}
+		}
+		if (KnuxSkin == 0x13)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin13"
+        		}
+		}
+		if (KnuxSkin == 0x14)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin14"
+        		}
+		}
+		if (KnuxSkin == 0x15)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin15"
+        		}
+		}
+		if (KnuxSkin == 0x16)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin16"
+        		}
+		}
+		if (KnuxSkin == 0x17)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin17"
+        		}
+		}
+		if (KnuxSkin == 0x18)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin18"
+        		}
+		}
+		if (KnuxSkin == 0x19)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin19"
+        		}
+		}
+		if (KnuxSkin == 0x20)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin20"
+        		}
+		}
+		if (KnuxSkin == 0x21)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin21"
+        		}
+		}
+		if (KnuxSkin == 0x22)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin22"
+        		}
+		}
+		if (KnuxSkin == 0x23)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin23"
+        		}
+		}
+		if (KnuxSkin == 0x24)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin24"
+        		}
+		}
+		if (KnuxSkin == 0x25)
+		{
+			if (SuperKnuxChar == 01)
+        		{
+        		return "character_hyperknuckles_skin25"
+        		}
+		}
+	}
+    }
+return base.getCharacterSpriteKey(character)
+}

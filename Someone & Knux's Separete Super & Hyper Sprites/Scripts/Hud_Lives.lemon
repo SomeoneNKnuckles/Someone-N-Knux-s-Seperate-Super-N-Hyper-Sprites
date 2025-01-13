@@ -1,0 +1,283 @@
+function u64 getCharacterLivesIcon(u8 character)
+{
+    if (global.characters == CHARS_SONIC_AND_TAILS)
+    {
+	if (super.active)
+	{
+        	if (SuperPartnerHud == 00)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_icon_supersonic_tails" : "hud_lives_icon_supersonic_miles"
+        	}
+		if (SuperPartnerHud == 01)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_icon_sonic_tails" : "hud_lives_icon_sonic_miles"
+        	}
+	}
+	if (super.active == 0xff)
+	{
+        	if (SuperPartnerHud == 00)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_icon_hypersonic_tails" : "hud_lives_icon_hypersonic_miles"
+        	}
+		if (SuperPartnerHud == 01)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_icon_sonic_tails" : "hud_lives_icon_sonic_miles"
+        	}
+	}
+    }
+    if (useKnucklesAndTails)
+    {
+	if (super.active)
+	{
+        	if (SuperPartnerHud == 00)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_icon_superknux_tails" : "hud_lives_icon_superknux_miles"
+        	}
+		if (SuperPartnerHud == 01)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_icon_knux_tails" : "hud_lives_icon_knux_miles"
+        	}
+	}
+	if (super.active == 0xff)
+	{
+        	if (SuperPartnerHud == 00)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_icon_hyperknux_tails" : "hud_lives_icon_hyperknux_miles"
+        	}
+		if (SuperPartnerHud == 01)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_icon_knux_tails" : "hud_lives_icon_knux_miles"
+        	}
+	}
+    }
+    if (character == CHARACTER_SONIC)
+    {
+	if (super.active)
+	{
+        	if (SuperSonicHud == 00)
+        	{
+        	return "hud_lives_icon_supersonic"
+        	}
+		if (SuperSonicHud == 01)
+        	{
+        	return "hud_lives_icon_sonic"
+        	}
+	}
+	if (super.active == 0xff)
+	{
+        	if (SuperSonicHud == 00)
+        	{
+        	return "hud_lives_icon_hypersonic"
+        	}
+		if (SuperSonicHud == 01)
+        	{
+        	return "hud_lives_icon_sonic"
+        	}
+	}
+	else
+	{
+	return "hud_lives_icon_sonic"
+	}
+    }
+    if (character == CHARACTER_KNUCKLES)
+    {
+	if (super.active)
+	{
+        	if (SuperKnuxHud == 00)
+        	{
+        	return "hud_lives_icon_superknuckles"
+        	}
+		if (SuperKnuxHud == 01)
+        	{
+        	return "hud_lives_icon_knuckles"
+        	}
+	}
+	if (super.active == 0xff)
+	{
+        	if (SuperKnuxHud == 00)
+        	{
+        	return "hud_lives_icon_hyperknuckles"
+        	}
+		if (SuperKnuxHud == 01)
+        	{
+        	return "hud_lives_icon_knuckles"
+        	}
+	}
+	else
+	{
+	return "hud_lives_icon_knuckles"
+	}
+    }
+    if (character == CHARACTER_TAILS)
+    {
+	if (super.active.tails)
+	{
+        	if (SuperTailsHud == 00)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_icon_supertails" : "hud_lives_icon_supermiles"
+        	}
+		if (SuperTailsHud == 01)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_icon_tails" : "hud_lives_icon_miles"
+        	}
+	}
+	if (super.active.tails == 0xff)
+	{
+        	if (SuperTailsHud == 00)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_icon_hypertails" : "hud_lives_icon_hypermiles"
+        	}
+		if (SuperTailsHud == 01)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_icon_tails" : "hud_lives_icon_miles"
+        	}
+	}
+	else
+	{
+	return (global.region_code & 0x80) ? "hud_lives_icon_tails" : "hud_lives_icon_miles"
+	}
+    }
+return base.getCharacterLivesIcon(character)
+}
+
+function u64 getCharacterHudNames(u8 character)
+{
+    if (global.characters == CHARS_SONIC_AND_TAILS)
+    {
+	if (super.active)
+	{
+        	if (SuperPartnerHud == 00)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_text_supersonic_tails" : "hud_lives_text_supersonic_miles"
+        	}
+		if (SuperPartnerHud == 01)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_text_sonic_tails" : "hud_lives_text_sonic_miles"
+        	}
+	}
+	if (super.active == 0xff)
+	{
+        	if (SuperPartnerHud == 00)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_text_hypersonic_tails" : "hud_lives_text_hypersonic_miles"
+        	}
+		if (SuperPartnerHud == 01)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_text_sonic_tails" : "hud_lives_text_sonic_miles"
+        	}
+	}
+    }
+    if (useKnucklesAndTails)
+    {
+	if (super.active)
+	{
+        	if (SuperPartnerHud == 00)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_text_superknux_tails" : "hud_lives_text_superknux_miles"
+        	}
+		if (SuperPartnerHud == 01)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_text_knux_tails" : "hud_lives_text_knux_miles"
+        	}
+	}
+	if (super.active == 0xff)
+	{
+        	if (SuperPartnerHud == 00)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_text_hyperknux_tails" : "hud_lives_text_hyperknux_miles"
+        	}
+		if (SuperPartnerHud == 01)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_text_knux_tails" : "hud_lives_text_knux_miles"
+        	}
+	}
+    }
+    if (character == CHARACTER_SONIC)
+    {
+	if (super.active)
+	{
+        	if (SuperSonicHud == 00)
+        	{
+        	return "hud_lives_text_supersonic"
+        	}
+		if (SuperSonicHud == 01)
+        	{
+        	return "hud_lives_text_sonic"
+        	}
+	}
+	if (super.active == 0xff)
+	{
+        	if (SuperSonicHud == 00)
+        	{
+        	return "hud_lives_text_hypersonic"
+        	}
+		if (SuperSonicHud == 01)
+        	{
+        	return "hud_lives_text_sonic"
+        	}
+	}
+	else
+	{
+	return "hud_lives_text_sonic"
+	}
+    }
+    if (character == CHARACTER_KNUCKLES)
+    {
+	if (super.active)
+	{
+        	if (SuperKnuxHud == 00)
+        	{
+        	return "hud_lives_text_superknuckles"
+        	}
+		if (SuperKnuxHud == 01)
+        	{
+        	return "hud_lives_text_knuckles"
+        	}
+	}
+	if (super.active == 0xff)
+	{
+        	if (SuperKnuxHud == 00)
+        	{
+        	return "hud_lives_text_hyperknuckles"
+        	}
+		if (SuperKnuxHud == 01)
+        	{
+        	return "hud_lives_text_knuckles"
+        	}
+	}
+	else
+	{
+	return "hud_lives_text_knuckles"
+	}
+    }
+    if (character == CHARACTER_TAILS)
+    {
+	if (super.active.tails)
+	{
+        	if (SuperTailsHud == 00)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_text_supertails" : "hud_lives_text_supermiles"
+        	}
+		if (SuperTailsHud == 01)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_text_tails" : "hud_lives_text_miles"
+        	}
+	}
+	if (super.active.tails == 0xff)
+	{
+        	if (SuperTailsHud == 00)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_text_hypertails" : "hud_lives_text_hypermiles"
+        	}
+		if (SuperTailsHud == 01)
+        	{
+        	return (global.region_code & 0x80) ? "hud_lives_text_tails" : "hud_lives_text_miles"
+        	}
+	}
+	else
+	{
+	return (global.region_code & 0x80) ? "hud_lives_text_tails" : "hud_lives_text_miles"
+	}
+    }
+return base.getCharacterHudNames(character)
+}
