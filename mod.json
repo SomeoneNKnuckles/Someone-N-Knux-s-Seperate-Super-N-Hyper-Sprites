@@ -1,0 +1,19 @@
+{
+	"Metadata":
+	{
+		"Name": "Super Partner Lock-On",
+		"UniqueID": "tails-eres-super",
+		"Author": "Someone & Knuckles",
+		"Description": "Makes Partner Tails Use His Super Sprites! Without Using The Main Mod...",
+		"ModVersion": "2.0"
+	},
+	"OtherMods":
+	{
+		"alguien-es-super-y-hiper":
+		{
+			"DisplayName": "Someone & Knux's Separete Super & Hyper Sprites",
+			"IsRequired": "0",
+			"Priority": "Higher"
+	    	},
+	}
+}
