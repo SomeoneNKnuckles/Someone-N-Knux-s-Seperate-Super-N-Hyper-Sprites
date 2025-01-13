@@ -1,0 +1,10 @@
+{
+	"supersonic_peelout_0":  { "File": "Base_Thing.bmp", "Rect": "0,0,95,95", "Center": "48,48" },
+	"hypersonic_peelout_0":  { "File": "Base_Thing_Alt.bmp", "Rect": "0,0,95,95", "Center": "48,48" },
+	"supersonic_peelout_1":  { "File": "Base_Thing.bmp", "Rect": "0,0,95,95", "Center": "48,48" },
+	"hypersonic_peelout_1":  { "File": "Base_Thing_Alt.bmp", "Rect": "0,0,95,95", "Center": "48,48" },
+	"supersonic_peelout_2":  { "File": "Base_Thing.bmp", "Rect": "0,0,95,95", "Center": "48,48" },
+	"hypersonic_peelout_2":  { "File": "Base_Thing_Alt.bmp", "Rect": "0,0,95,95", "Center": "48,48" },
+	"supersonic_peelout_3":  { "File": "Base_Thing.bmp", "Rect": "0,0,95,95", "Center": "48,48" },
+	"hypersonic_peelout_3":  { "File": "Base_Thing_Alt.bmp", "Rect": "0,0,95,95", "Center": "48,48" },
+}
