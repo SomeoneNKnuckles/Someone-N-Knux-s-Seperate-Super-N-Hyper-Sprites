@@ -6,7 +6,7 @@
 		"Author": "Someone & Knuckles",
 		"Description": "A (Somehow) Good Mod Of Separete Super & Hyper Sprites (That For Some Reason Works Great...)",
 		"URL": "https://gamebanana.com/mods/558742",
-		"ModVersion": "4.5"
+		"ModVersion": "5.0"
 	},
 	"Settings":
 	{
@@ -126,11 +126,11 @@
 				"DisplayName": "E.S. Super & Hyper Sprites",
 				"Variable": "SuperExtraChar",
 				"Category": "Character Sprites",
-				"DefaultValue": "0",
+				"DefaultValue": "1",
 				"Options":
 				{
-					"0": "Deactivated",
-					"1": "Activated"
+					"1": "Deactivated",
+					"0": "Activated"
 				}
 			},
 			{
@@ -138,11 +138,11 @@
 				"DisplayName": "E.S. Super & Hyper Sprites",
 				"Variable": "SuperExtraHud",
 				"Category": "Life Icon Sprites",
-				"DefaultValue": "0",
+				"DefaultValue": "1",
 				"Options":
 				{
-					"0": "Deactivated",
-					"1": "Activated"
+					"1": "Deactivated",
+					"0": "Activated"
 				}
 			},
 			{
