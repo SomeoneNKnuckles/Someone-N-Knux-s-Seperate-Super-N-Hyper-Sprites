@@ -4,6 +4,8 @@ global u8 SuperSonicChar
 global u8 SuperTailsChar
 global u8 SuperKnuxChar
 global u8 SuperSonicPeel
+global u8 SuperTailsPeel
+global u8 SuperKnuxPeel
 
 //Hud Stuff
 global u8 SuperPartnerHud
@@ -28,6 +30,11 @@ global u8 SuperKnuxStan
 global u8 TailsVictoryAnim
 global u8 KnuxVictoryAnim
 
+#if !EXTRA_CHARACTERS_UNLIMITED
+//ESU Is Not Required Now
+global u64 global.xtrachar
+#endif
+
 //Scripts Includer
 include Character
 include SkinSel
@@ -35,4 +42,3 @@ include Hud_Lives
 include Extra_Stuff
 include Super_Palette
 include Super_Idle
-include More_Hud

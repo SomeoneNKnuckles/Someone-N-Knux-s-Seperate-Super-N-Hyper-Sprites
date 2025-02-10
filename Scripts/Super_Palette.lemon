@@ -258,10 +258,6 @@ function void UpdatePaletteEffects.SuperForm.moddingVersion(u8 characterVersion)
 
 function void Character.TailsAI.Update()
 {
-	if (global.zone_act == 0x0c00)
-	{
-		tails.ai_routine = 0x04
-	}
    if (SuperPartnerChar == 00)
    {
 	A1 = 0xffffb000		// Player 1
@@ -272,8 +268,6 @@ function void Character.TailsAI.Update()
 
 	if (objA1.state == char.state.TRANSFORMING) && (char.flags & char.flag.IN_AIR)
 	{
-		char.flags |= char.flag.IN_AIR
-		char.invinc.countdown = 0
 		char.state = char.state.TAILS_TRANSFORM
 	}
 	if (char.flags & char.flag.UNDERWATER)
@@ -284,22 +278,16 @@ function void Character.TailsAI.Update()
 			{
 				super.active.tails = 0xff
 				char.bonus_effect |= char.bonus.INVINCIBLE
-				global.move.speedcap = 0x500
 				global.move.speedcap.tails = 0x500
-				global.move.acceleration = 0x18
 				global.move.acceleration.tails = 0x18
-				global.move.deceleration = 0x80
 				global.move.deceleration.tails = 0x80
 			}
 			else
 			{
 				super.active.tails = 0x01
 				char.bonus_effect |= char.bonus.INVINCIBLE
-				global.move.speedcap = 0x500
 				global.move.speedcap.tails = 0x500
-				global.move.acceleration = 0x18
 				global.move.acceleration.tails = 0x18
-				global.move.deceleration = 0x80
 				global.move.deceleration.tails = 0x80
 			}
 		}
@@ -307,11 +295,8 @@ function void Character.TailsAI.Update()
 		{
 			super.active.tails = 0x00
 			char.bonus_effect &= ~char.bonus.INVINCIBLE
-			global.move.speedcap = 0x300
 			global.move.speedcap.tails = 0x300
-			global.move.acceleration = 0x06
 			global.move.acceleration.tails = 0x06
-			global.move.deceleration = 0x40
 			global.move.deceleration.tails = 0x40
 		}
 	}
@@ -323,23 +308,16 @@ function void Character.TailsAI.Update()
 			{
 				super.active.tails = 0xff
 				char.bonus_effect |= char.bonus.INVINCIBLE
-				u32[0xffffcbc0] = addressof(AfterImages.Init)
-				global.move.speedcap = 0x900
 				global.move.speedcap.tails = 0x900
-				global.move.acceleration = 0x30
 				global.move.acceleration.tails = 0x30
-				global.move.deceleration = 0x100
 				global.move.deceleration.tails = 0x100
 			}
 			else
 			{
 				super.active.tails = 0x01
 				char.bonus_effect |= char.bonus.INVINCIBLE
-				global.move.speedcap = 0x900
 				global.move.speedcap.tails = 0x900
-				global.move.acceleration = 0x30
 				global.move.acceleration.tails = 0x30
-				global.move.deceleration = 0x100
 				global.move.deceleration.tails = 0x100
 			}
 		}
@@ -350,12 +328,8 @@ function void Character.TailsAI.Update()
 			global.move.speedcap.tails = 0x600
 			global.move.acceleration.tails = 0x0c
 			global.move.deceleration.tails = 0x80
-			global.move.speedcap = 0x600
-			global.move.acceleration = 0x0c
-			global.move.deceleration = 0x80
 		}
 	}
    }
-
 	base.Character.TailsAI.Update()
 }

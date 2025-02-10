@@ -16,7 +16,7 @@ function u64 getCharacterSpriteKey(u8 character)
         	return "character_slotXXX"
         	}
 	}
-	else if (super.active)
+	else if (super.active == 0x01)
 	{
         	if (SuperExtraChar == 00)
         	{

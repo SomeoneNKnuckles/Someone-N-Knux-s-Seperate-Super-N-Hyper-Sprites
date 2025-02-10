@@ -15,7 +15,7 @@ function u64 Monitor.getIconSpriteKey(u8 type)
 			return "monitor_icon_super"
 		}
 	}
-	if (type == 0x01 && isMainCharacter(CHARACTER_SONIC))
+	if (type == 0x01 && isMainCharacter(CHARACTER_SONIC) && u8[0xffffe654] == 0)
 	{
 	   if (SuperSonicMon == 00)
 	   {
@@ -37,7 +37,7 @@ function u64 Monitor.getIconSpriteKey(u8 type)
 		return "monitor_icon_sonic"
 	   }
 	}
-	if (type == 0x01 && isMainCharacter(CHARACTER_TAILS))
+	if (type == 0x01 && isMainCharacter(CHARACTER_TAILS) && u8[0xffffe654] == 0)
 	{
 	   if (SuperTailsMon == 00)
 	   {
@@ -59,7 +59,7 @@ function u64 Monitor.getIconSpriteKey(u8 type)
 		return "monitor_icon_tails"
 	   }
 	}
-	if (type == 0x01 && isMainCharacter(CHARACTER_KNUCKLES))
+	if (type == 0x01 && isMainCharacter(CHARACTER_KNUCKLES) && u8[0xffffe654] == 0)
 	{
 	   if (SuperKnuxMon == 00)
 	   {
@@ -81,15 +81,15 @@ function u64 Monitor.getIconSpriteKey(u8 type)
 		return "monitor_icon_knuckles"
 	   }
 	}
-	if (type == 0x04 && isMainCharacter(CHARACTER_SONIC))
+	if (type == 0x04 && isMainCharacter(CHARACTER_SONIC) && u8[0xffffe654] == 0)
 	{
 		return "monitor_sonic_shoe"
 	}
-	if (type == 0x04 && isMainCharacter(CHARACTER_TAILS))
+	if (type == 0x04 && isMainCharacter(CHARACTER_TAILS) && u8[0xffffe654] == 0)
 	{
 		return "monitor_tails_shoe"
 	}
-	if (type == 0x04 && isMainCharacter(CHARACTER_KNUCKLES))
+	if (type == 0x04 && isMainCharacter(CHARACTER_KNUCKLES) && u8[0xffffe654] == 0)
 	{
 		return "monitor_knuckles_shoe"
 	}
@@ -127,4 +127,84 @@ function string Standalone.getModdedAnimationSpriteKey (u8 character, u16 animat
     	}
     }
     return base.Standalone.getModdedAnimationSpriteKey(character, animationSpriteEx)
+}
+
+function u64 getCharacterSignpostSpriteKey(u8 character)
+{
+	if (global.characters == 0 && u8[0xffffe654] == 0)
+	{
+		if (super.active == 0xff)
+		{
+			return "signpost_hypersonic_tails"
+		}
+		if (super.active == 0x01)
+		{
+			return "signpost_supersonic_tails"
+		}
+		else
+		{
+			return "signpost_sonic_tails"
+		}
+	}
+	if (useKnucklesAndTails && u8[0xffffe654] == 0)
+	{
+		if (super.active == 0xff)
+		{
+			return "signpost_hyperknuckles_tails"
+		}
+		if (super.active == 0x01)
+		{
+			return "signpost_superknuckles_tails"
+		}
+		else
+		{
+			return "signpost_knuckles_tails"
+		}
+	}
+	if (character == CHARACTER_SONIC && u8[0xffffe654] == 0)
+	{
+		if (super.active == 0xff)
+		{
+			return "signpost_hypersonic"
+		}
+		if (super.active == 0x01)
+		{
+			return "signpost_supersonic"
+		}
+		else
+		{
+			return "signpost_sonic"
+		}
+	}
+	if (character == CHARACTER_TAILS && u8[0xffffe654] == 0)
+	{
+		if (super.active.tails == 0xff)
+		{
+			return "signpost_hypertails"
+		}
+		if (super.active.tails == 0x01)
+		{
+			return "signpost_supertails"
+		}
+		else
+		{
+			return "signpost_tails"
+		}
+	}
+	if (character == CHARACTER_KNUCKLES && u8[0xffffe654] == 0)
+	{
+		if (super.active == 0xff)
+		{
+			return "signpost_hyperknuckles"
+		}
+		if (super.active == 0x01)
+		{
+			return "signpost_superknuckles"
+		}
+		else
+		{
+			return "signpost_knuckles"
+		}
+	}
+return base.getCharacterSignpostSpriteKey(character)
 }

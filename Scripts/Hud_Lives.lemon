@@ -1,6 +1,6 @@
-function u64 getCharacterLivesIcon(u8 character)
+function string getCharacterLivesIcon(u8 character)
 {
-    if (global.characters == CHARS_SONIC_AND_TAILS)
+    if (global.characters == CHARS_SONIC_AND_TAILS && u8[0xffffe654] == 0)
     {
 	if (super.active)
 	{
@@ -25,7 +25,7 @@ function u64 getCharacterLivesIcon(u8 character)
         	}
 	}
     }
-    if (useKnucklesAndTails)
+    if (useKnucklesAndTails && u8[0xffffe654] == 0)
     {
 	if (super.active)
 	{
@@ -50,7 +50,7 @@ function u64 getCharacterLivesIcon(u8 character)
         	}
 	}
     }
-    if (character == CHARACTER_SONIC)
+    if (character == CHARACTER_SONIC && u8[0xffffe654] == 0)
     {
 	if (super.active)
 	{
@@ -79,7 +79,7 @@ function u64 getCharacterLivesIcon(u8 character)
 	return "hud_lives_icon_sonic"
 	}
     }
-    if (character == CHARACTER_KNUCKLES)
+    if (character == CHARACTER_KNUCKLES && u8[0xffffe654] == 0)
     {
 	if (super.active)
 	{
@@ -108,7 +108,7 @@ function u64 getCharacterLivesIcon(u8 character)
 	return "hud_lives_icon_knuckles"
 	}
     }
-    if (character == CHARACTER_TAILS)
+    if (character == CHARACTER_TAILS && u8[0xffffe654] == 0)
     {
 	if (super.active.tails)
 	{
@@ -140,9 +140,9 @@ function u64 getCharacterLivesIcon(u8 character)
 return base.getCharacterLivesIcon(character)
 }
 
-function u64 getCharacterHudNames(u8 character)
+function string getCharacterHudNames(u8 character)
 {
-    if (global.characters == CHARS_SONIC_AND_TAILS)
+    if (global.characters == CHARS_SONIC_AND_TAILS && u8[0xffffe654] == 0)
     {
 	if (super.active)
 	{
@@ -167,7 +167,7 @@ function u64 getCharacterHudNames(u8 character)
         	}
 	}
     }
-    if (useKnucklesAndTails)
+    if (useKnucklesAndTails && u8[0xffffe654] == 0)
     {
 	if (super.active)
 	{
@@ -192,7 +192,7 @@ function u64 getCharacterHudNames(u8 character)
         	}
 	}
     }
-    if (character == CHARACTER_SONIC)
+    if (character == CHARACTER_SONIC && u8[0xffffe654] == 0)
     {
 	if (super.active)
 	{
@@ -221,7 +221,7 @@ function u64 getCharacterHudNames(u8 character)
 	return "hud_lives_text_sonic"
 	}
     }
-    if (character == CHARACTER_KNUCKLES)
+    if (character == CHARACTER_KNUCKLES && u8[0xffffe654] == 0)
     {
 	if (super.active)
 	{
@@ -250,7 +250,7 @@ function u64 getCharacterHudNames(u8 character)
 	return "hud_lives_text_knuckles"
 	}
     }
-    if (character == CHARACTER_TAILS)
+    if (character == CHARACTER_TAILS && u8[0xffffe654] == 0)
     {
 	if (super.active.tails)
 	{
