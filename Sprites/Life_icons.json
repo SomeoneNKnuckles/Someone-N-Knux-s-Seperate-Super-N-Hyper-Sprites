@@ -61,5 +61,5 @@
 	"monitor_icon_supersonic_tails":  { "File": "Life_Icons.bmp", "Rect": "147,49,24,16", "Center": "12,8" },
 	"monitor_icon_superknux_tails":  { "File": "Life_Icons.bmp", "Rect": "147,65,24,16", "Center": "12,8" },
 	"monitor_icon_hypersonic_tails":  { "File": "Life_Icons.bmp", "Rect": "147,49,24,16", "Center": "12,8" },
-	"monitor_icon_hyperknux_tails":  { "File": "Life_Icons.bmp", "Rect": "147,65,24,16", "Center": "12,8" }
+	"monitor_icon_hyperknux_tails":  { "File": "Life_Icons.bmp", "Rect": "147,65,24,16", "Center": "12,8" },
 }
