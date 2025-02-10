@@ -1,0 +1,10 @@
+{
+	// Overwrite Sonic's colors with red tones in the default non-underwater palette;
+	// this will affect Sonic himself (unless a palette mod is used), and also other places
+	// where his colors are used, e.g. his image on the signpost
+	"SeparateSpritesSuperSonicDuck":
+	{
+		"File": "SuperSonicDuck.bin",
+		"RomInject": "0x12aa6"
+	}
+}
